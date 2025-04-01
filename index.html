@@ -12,11 +12,12 @@
             background-color: #f4f4f4;
             text-align: center;
         }
-     <header>
-    <img src="https://raw.githubusercontent.com/Fabulaciones/objetosconhistoria/main/Objetos%20con%20Historia%20cabecera.png" 
-         alt="Objetos con Historia" style="max-width: 100%; height: auto;">
-    <h1>Objetos con Historia</h1>
-</header>
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -45,6 +46,10 @@
             text-align: right;
             margin: 10px;
         }
+        .header-img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +57,7 @@
         <a href="#" onclick="changeLanguage('es')">ES</a> | <a href="#" onclick="changeLanguage('en')">EN</a>
     </div>
     <header>
+        <img src="https://raw.githubusercontent.com/Fabulaciones/objetosconhistoria/main/Objetos%20con%20Historia%20cabecera.png" alt="Objetos con Historia" class="header-img">
         <h1>Objetos con Historia</h1>
     </header>
     <div class="container">

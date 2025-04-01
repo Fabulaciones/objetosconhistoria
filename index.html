@@ -27,6 +27,10 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: justify;
         }
+        .episode-list {
+            list-style: none;
+            padding: 0;
+        }
         .episode-item {
             display: flex;
             align-items: center;
@@ -38,71 +42,52 @@
             margin-left: 20px;
             text-align: left;
         }
-        .episode-image {
+        .episode-video iframe {
             width: 100%;
-            max-width: 150px;
-            height: auto;
+            max-width: 300px;
+            height: 200px;
             border-radius: 5px;
         }
-        .hidden {
-            display: none;
-        }
-        .language-selector {
-            margin: 20px;
+        .language-buttons {
+            margin: 10px;
         }
     </style>
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll("[data-lang]");
+            elements.forEach(el => {
+                el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+            });
+        }
+    </script>
 </head>
-<body>
+<body onload="changeLanguage('es')">
     <header>
-        <img src="Objetos con Historia cabecera.png" alt="Cabecera Objetos con Historia">
         <h1>Objetos con Historia</h1>
-        <div class="language-selector">
-            <button onclick="setLanguage('es')">🇪🇸 Español</button>
-            <button onclick="setLanguage('en')">🇬🇧 English</button>
+        <div class="language-buttons">
+            <button onclick="changeLanguage('es')">Español</button>
+            <button onclick="changeLanguage('en')">English</button>
         </div>
     </header>
     <div class="container">
-        <div class="lang es">
-            <p>Objetos con Historia es un podcast que revela las fascinantes historias detrás de los objetos cotidianos que han cambiado el mundo.</p>
-            <p>Explora sus orígenes, las mentes brillantes detrás de ellos y los giros inesperados que los convirtieron en imprescindibles.</p>
-            <h3>Episodios</h3>
-            <ul class="episode-list">
-                <li class="episode-item">
-                    <img src="https://raw.githubusercontent.com/Fabulaciones/objetosconhistoria/main/fork001.jpg" alt="Imagen del Tenedor" class="episode-image">
-                    <div class="episode-text">
-                        <a href="https://youtu.be/-UTfirxjdEI" target="_blank"><strong>Episodio 1: El Tenedor</strong></a>
-                        <p>Descubre la sorprendente historia del tenedor, un utensilio que pasó de ser rechazado en la antigüedad a convertirse en esencial.</p>
-                    </div>
-                </li>
-                <li><a href="#">Episodio 2: La Cuchara</a></li>
-                <li><a href="#">Episodio 3: El Cuchillo</a></li>
-            </ul>
-        </div>
-        <div class="lang en hidden">
-            <p>Objetos con Historia is a podcast that reveals the fascinating stories behind everyday objects that have changed the world.</p>
-            <p>Explore their origins, the brilliant minds behind them, and the unexpected twists that made them indispensable.</p>
-            <h3>Episodes</h3>
-            <ul class="episode-list">
-                <li class="episode-item">
-                    <img src="https://raw.githubusercontent.com/Fabulaciones/objetosconhistoria/main/fork001.jpg" alt="Fork Image" class="episode-image">
-                    <div class="episode-text">
-                        <a href="https://youtu.be/-UTfirxjdEI" target="_blank"><strong>Episode 1: The Fork</strong></a>
-                        <p>Discover the surprising history of the fork, a utensil that was once rejected but became essential at our tables.</p>
-                    </div>
-                </li>
-                <li><a href="#">Episode 2: The Spoon</a></li>
-                <li><a href="#">Episode 3: The Knife</a></li>
-            </ul>
-        </div>
+        <p data-lang="es">Objetos con Historia es un podcast que revela las fascinantes historias detrás de los objetos cotidianos...</p>
+        <p data-lang="en" style="display:none;">Objects with History is a podcast that reveals the fascinating stories behind everyday objects...</p>
+        <h3 data-lang="es">Episodios</h3>
+        <h3 data-lang="en" style="display:none;">Episodes</h3>
+        <ul class="episode-list">
+            <li class="episode-item">
+                <div class="episode-video">
+                    <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="episode-text">
+                    <p data-lang="es">Descubre la sorprendente historia del tenedor...</p>
+                    <p data-lang="en" style="display:none;">Discover the surprising history of the fork...</p>
+                </div>
+            </li>
+        </ul>
     </div>
     <footer>
-        &copy; 2025 Objetos con Historia | Follow us on social media
+        &copy; 2025 Objetos con Historia
     </footer>
-    <script>
-        function setLanguage(lang) {
-            document.querySelectorAll('.lang').forEach(el => el.classList.add('hidden'));
-            document.querySelector('.' + lang).classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>

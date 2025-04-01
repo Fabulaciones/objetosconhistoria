@@ -48,11 +48,21 @@
             background-color: #2c3e50;
             color: white;
         }
+        .episode-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .episode-text {
+            flex: 1;
+            margin-right: 20px;
+            text-align: left;
+        }
         .episode-image {
             width: 100%;
-            max-width: 300px;
+            max-width: 150px;
             height: auto;
-            margin-top: 10px;
             border-radius: 5px;
         }
     </style>
@@ -67,10 +77,13 @@
         <p>Explora sus orígenes, las mentes brillantes detrás de ellos y los giros inesperados que los convirtieron en imprescindibles. ¡Dale play y sumérgete en un viaje donde lo cotidiano se vuelve extraordinario!</p>
         <h3>Episodios</h3>
         <ul class="episode-list">
-            <li>
-                <a href="https://youtu.be/-UTfirxjdEI" target="_blank">Episodio 1: El Tenedor</a>
-                <p>Descubre la sorprendente historia del tenedor, un utensilio que pasó de ser rechazado en la antigüedad a convertirse en una pieza esencial en nuestra mesa. Exploramos sus orígenes, evolución y su impacto en la cultura gastronómica.</p>
-                <img src="fork001.jpg" alt="Imagen del Tenedor" class="episode-image">
+            <li class="episode-item">
+                <div class="episode-text">
+                    <a href="https://youtu.be/-UTfirxjdEI" target="_blank"><strong>Episodio 1: El Tenedor</strong></a>
+                    <p>Descubre la sorprendente historia del tenedor, un utensilio que pasó de ser rechazado en la antigüedad a convertirse en una pieza esencial en nuestra mesa. Exploramos sus orígenes, evolución y su impacto en la cultura gastronómica.</p>
+                </div>
+                <!-- Imagen del tenedor desde GitHub -->
+                <img src="https://raw.githubusercontent.com/Fabulaciones/objetosconhistoria/main/fork001.jpg" alt="Imagen del Tenedor" class="episode-image">
             </li>
             <li><a href="#">Episodio 2: La Cuchara</a></li>
             <li><a href="#">Episodio 3: El Cuchillo</a></li>

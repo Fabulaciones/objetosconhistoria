@@ -25,98 +25,146 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
         }
         .episode {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin-bottom: 20px;
+            text-align: left;
         }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-            height: 0;
-            overflow: hidden;
+        .episode iframe {
+            max-width: 250px;
+            height: 140px;
+            border-radius: 5px;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .episode-text {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .language-toggle {
+            text-align: right;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
+    <div class="language-toggle">
+        <a href="#" onclick="changeLanguage('es')">ES</a> | <a href="#" onclick="changeLanguage('en')">EN</a>
+    </div>
     <header>
         <h1>Objetos con Historia</h1>
     </header>
     <div class="container">
-        <h2>Objetos con Historia – El Podcast que Revela los Secretos de los Objetos Cotidianos</h2>
+        <p id="intro">Objetos con Historia – El Podcast que Revela los Secretos de los Objetos Cotidianos</p>
         <p>Bienvenido a Objetos con Historia, el podcast donde exploramos el origen, evolución e impacto de los objetos que usamos a diario...</p>
         
         <h3>Episodios</h3>
+
+        <!-- Episodio 10 -->
         <div class="episode">
-            <h4>Episodio 10: La Historia de la Cafetera - Parte 3</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/NFwk4O2_AmY" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/NFwk4O2_AmY" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 10: La Historia de la Cafetera - Parte 3</strong>
+                <p>Descubre la evolución final de la cafetera y su impacto en la cultura del café.</p>
             </div>
         </div>
+
+        <!-- Episodio 9 -->
         <div class="episode">
-            <h4>Episodio 9: La Historia de la Cafetera - Parte 2</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/NgJMC9fqbus" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/NgJMC9fqbus" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 9: La Historia de la Cafetera - Parte 2</strong>
+                <p>Un viaje al pasado para conocer los cambios en el diseño de la cafetera.</p>
             </div>
         </div>
+
+        <!-- Episodio 8 -->
         <div class="episode">
-            <h4>Episodio 8: La Cafetera I</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/CVF8_GmUJGM" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/CVF8_GmUJGM" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 8: La Cafetera I</strong>
+                <p>Exploramos el origen y los primeros intentos de hacer café de manera eficiente.</p>
             </div>
         </div>
+
+        <!-- Episodio 7 -->
         <div class="episode">
-            <h4>Episodio 7: La Licuadora</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/zbW7zIpSzzc" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/zbW7zIpSzzc" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 7: La Licuadora</strong>
+                <p>La historia detrás de la licuadora y su impacto en la cocina moderna.</p>
             </div>
         </div>
+
+        <!-- Episodio 6 -->
         <div class="episode">
-            <h4>Episodio 6: El Refrigerador</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/FTmmlhrxToQ" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/FTmmlhrxToQ" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 6: El Refrigerador</strong>
+                <p>Descubre cómo el refrigerador transformó la vida cotidiana y la industria alimentaria.</p>
             </div>
         </div>
+
+        <!-- Episodio 5 -->
         <div class="episode">
-            <h4>Episodio 5: La Olla de Presión</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/oXTBy7oX0ZY" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/oXTBy7oX0ZY" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 5: La Olla de Presión</strong>
+                <p>Cómo una invención revolucionó la forma de cocinar y ahorrar tiempo en la cocina.</p>
             </div>
         </div>
+
+        <!-- Episodio 4 -->
         <div class="episode">
-            <h4>Episodio 4: El Plato</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/mR6yhGr6nwM" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/mR6yhGr6nwM" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 4: El Plato</strong>
+                <p>Explora el origen del plato y su transformación en un símbolo cultural y gastronómico.</p>
             </div>
         </div>
+
+        <!-- Episodio 3 -->
         <div class="episode">
-            <h4>Episodio 3: El Cuchillo</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/zO6trVSgNGo" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/zO6trVSgNGo" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 3: El Cuchillo</strong>
+                <p>El cuchillo, una herramienta fundamental en la historia de la humanidad, desde su invención hasta hoy.</p>
             </div>
         </div>
+
+        <!-- Episodio 2 -->
         <div class="episode">
-            <h4>Episodio 2: La Cuchara</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/97z9OqDEeOc" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/97z9OqDEeOc" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 2: La Cuchara</strong>
+                <p>La cuchara: un utensilio tan común que no pensamos en su fascinante historia.</p>
             </div>
         </div>
+
+        <!-- Episodio 1 -->
         <div class="episode">
-            <h4>Episodio 1: El Tenedor</h4>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" allowfullscreen></iframe>
+            <div class="episode-text">
+                <strong>Episodio 1: El Tenedor</strong>
+                <p>Descubre la sorprendente historia del tenedor, un utensilio que pasó de ser rechazado en la antigüedad a convertirse en una pieza esencial en nuestra mesa.</p>
             </div>
         </div>
+
     </div>
+
     <footer>
         &copy; 2025 Objetos con Historia | Síguenos en redes sociales
     </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('intro').innerText = "Objects with History – The Podcast that Reveals the Secrets of Everyday Objects";
+            } else {
+                document.getElementById('intro').innerText = "Objetos con Historia – El Podcast que Revela los Secretos de los Objetos Cotidianos";
+            }
+        }
+    </script>
 </body>
 </html>

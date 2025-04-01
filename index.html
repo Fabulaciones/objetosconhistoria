@@ -25,21 +25,23 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
         }
-        .episode-list {
-            list-style: none;
-            padding: 0;
+        .episode {
+            margin-bottom: 20px;
         }
-        .episode-list li {
-            margin: 20px 0;
-            padding: 10px;
-            background: #ecf0f1;
-            border-radius: 5px;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            height: 0;
+            overflow: hidden;
         }
-        iframe {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 315px;
-            border-radius: 5px;
+            height: 100%;
         }
     </style>
 </head>
@@ -49,57 +51,72 @@
     </header>
     <div class="container">
         <h2>Objetos con Historia – El Podcast que Revela los Secretos de los Objetos Cotidianos</h2>
-        <p>Bienvenido a Objetos con Historia, el podcast donde exploramos el origen, evolución e impacto de los objetos que usamos a diario. Desde el humilde tenedor hasta la revolucionaria bombilla eléctrica, cada episodio está lleno de curiosidades, anécdotas sorprendentes y datos históricos que te harán ver el mundo con otros ojos.</p>
-        <p>En este viaje sonoro descubrirás cómo herramientas, utensilios y artefactos han moldeado la vida moderna, transformando nuestra manera de vivir, trabajar y comunicarnos. Si te apasiona la historia, la tecnología y la cultura, este es el lugar perfecto para ti.</p>
-        <p>🎧 Escucha nuestros episodios y descubre la historia oculta detrás de los objetos más cotidianos.</p>
-        <p>📢 Síguenos y comparte para que más personas descubran la magia de los objetos con historia.</p>
+        <p>Bienvenido a Objetos con Historia, el podcast donde exploramos el origen, evolución e impacto de los objetos que usamos a diario...</p>
+        
         <h3>Episodios</h3>
-        <ul class="episode-list">
-            <li>
-                <h4>Episodio 10: La Historia de la Cafetera - Parte 3</h4>
-                <iframe src="https://www.youtube.com/embed/NFwk4O2_AmY" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 9: La Historia de la Cafetera - Parte 2</h4>
-                <iframe src="https://www.youtube.com/embed/NgJMC9fqbus" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 8: La Cafetera I</h4>
-                <iframe src="https://www.youtube.com/embed/CVF8_GmUJGM" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 7: La Licuadora</h4>
-                <iframe src="https://www.youtube.com/embed/zbW7zIpSzzc" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 6: El Refrigerador</h4>
-                <iframe src="https://www.youtube.com/embed/FTmmlhrxToQ" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 5: La Olla de Presión</h4>
-                <iframe src="https://www.youtube.com/embed/oXTBy7oX0ZY" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 4: El Plato</h4>
-                <iframe src="https://www.youtube.com/embed/mR6yhGr6nwM" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 3: El Cuchillo</h4>
-                <iframe src="https://www.youtube.com/embed/zO6trVSgNGo" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 2: La Cuchara</h4>
-                <iframe src="https://www.youtube.com/embed/97z9OqDEeOc" allowfullscreen></iframe>
-            </li>
-            <li>
-                <h4>Episodio 1: El Tenedor</h4>
-                <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" allowfullscreen></iframe>
-            </li>
-        </ul>
+        <div class="episode">
+            <h4>Episodio 10: La Historia de la Cafetera - Parte 3</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/NFwk4O2_AmY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 9: La Historia de la Cafetera - Parte 2</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/NgJMC9fqbus" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 8: La Cafetera I</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/CVF8_GmUJGM" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 7: La Licuadora</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zbW7zIpSzzc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 6: El Refrigerador</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/FTmmlhrxToQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 5: La Olla de Presión</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/oXTBy7oX0ZY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 4: El Plato</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/mR6yhGr6nwM" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 3: El Cuchillo</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zO6trVSgNGo" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 2: La Cuchara</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/97z9OqDEeOc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="episode">
+            <h4>Episodio 1: El Tenedor</h4>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
     <footer>
         &copy; 2025 Objetos con Historia | Síguenos en redes sociales
     </footer>
 </body>
 </html>
-

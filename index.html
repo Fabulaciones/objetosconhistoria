@@ -161,8 +161,64 @@
         function changeLanguage(lang) {
             if (lang === 'en') {
                 document.getElementById('intro').innerText = "Objects with History – The Podcast that Reveals the Secrets of Everyday Objects";
+                document.querySelectorAll('.episode-text').forEach(function (el, index) {
+                    const titles = [
+                        "Episode 1: The Fork",
+                        "Episode 2: The Spoon",
+                        "Episode 3: The Knife",
+                        "Episode 4: The Plate",
+                        "Episode 5: The Pressure Cooker",
+                        "Episode 6: The Refrigerator",
+                        "Episode 7: The Blender",
+                        "Episode 8: The Coffee Maker I",
+                        "Episode 9: The Coffee Maker History - Part 2",
+                        "Episode 10: The Coffee Maker History - Part 3"
+                    ];
+                    const descriptions = [
+                        "Discover the surprising history of the fork, from being rejected in ancient times to becoming an essential item at the table.",
+                        "The spoon: a tool so common that we don't think about its fascinating history.",
+                        "The knife, a fundamental tool in human history, from its invention to today.",
+                        "Explore the origin of the plate and its transformation into a cultural and gastronomic symbol.",
+                        "How an invention revolutionized cooking and saved time in the kitchen.",
+                        "Discover how the refrigerator transformed everyday life and the food industry.",
+                        "The history behind the blender and its impact on modern cooking.",
+                        "Exploring the origin and early attempts at brewing coffee efficiently.",
+                        "A journey into the history of the coffee maker and its changes in design.",
+                        "The final evolution of the coffee maker and its impact on coffee culture."
+                    ];
+                    el.querySelector('strong').innerText = titles[index];
+                    el.querySelector('p').innerText = descriptions[index];
+                });
             } else {
                 document.getElementById('intro').innerText = "Objetos con Historia – El Podcast que Revela los Secretos de los Objetos Cotidianos";
+                document.querySelectorAll('.episode-text').forEach(function (el, index) {
+                    const titles = [
+                        "Episodio 1: El Tenedor",
+                        "Episodio 2: La Cuchara",
+                        "Episodio 3: El Cuchillo",
+                        "Episodio 4: El Plato",
+                        "Episodio 5: La Olla de Presión",
+                        "Episodio 6: El Refrigerador",
+                        "Episodio 7: La Licuadora",
+                        "Episodio 8: La Cafetera I",
+                        "Episodio 9: La Historia de la Cafetera - Parte 2",
+                        "Episodio 10: La Historia de la Cafetera - Parte 3"
+                    ];
+                    const descriptions = [
+                        "Descubre la sorprendente historia del tenedor, un utensilio que pasó de ser rechazado en la antigüedad a convertirse en una pieza esencial en nuestra mesa.",
+                        "La cuchara: un utensilio tan común que no pensamos en su fascinante historia.",
+                        "El cuchillo, una herramienta fundamental en la historia de la humanidad, desde su invención hasta hoy.",
+                        "Explora el origen del plato y su transformación en un símbolo cultural y gastronómico.",
+                        "Cómo una invención revolucionó la forma de cocinar y ahorrar tiempo en la cocina.",
+                        "Descubre cómo el refrigerador transformó la vida cotidiana y la industria alimentaria.",
+                        "La historia detrás de la licuadora y su impacto en la cocina moderna.",
+                        "Exploramos el origen y los primeros intentos de hacer café de manera eficiente.",
+                        "Un viaje al pasado para conocer los cambios en el diseño de la cafetera.",
+                        "Descubre la evolución final de la cafetera y su impacto en la cultura del café."
+                    ];
+                    el.querySelector('strong').innerText = titles[index];
+                    el.querySelector('p').innerText = descriptions[index];
+                });
             }
         }
     </script>

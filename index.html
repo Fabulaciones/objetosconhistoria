@@ -25,69 +25,81 @@
             background: white;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
         }
         .episode-list {
             list-style: none;
             padding: 0;
         }
-        .episode-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .episode-text {
-            flex: 1;
-            margin-left: 20px;
-            text-align: left;
-        }
-        .episode-video iframe {
-            width: 100%;
-            max-width: 300px;
-            height: 200px;
+        .episode-list li {
+            margin: 20px 0;
+            padding: 10px;
+            background: #ecf0f1;
             border-radius: 5px;
         }
-        .language-buttons {
-            margin: 10px;
+        iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 5px;
         }
     </style>
-    <script>
-        function changeLanguage(lang) {
-            const elements = document.querySelectorAll("[data-lang]");
-            elements.forEach(el => {
-                el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
-            });
-        }
-    </script>
 </head>
-<body onload="changeLanguage('es')">
+<body>
     <header>
         <h1>Objetos con Historia</h1>
-        <div class="language-buttons">
-            <button onclick="changeLanguage('es')">Español</button>
-            <button onclick="changeLanguage('en')">English</button>
-        </div>
     </header>
     <div class="container">
-        <p data-lang="es">Objetos con Historia es un podcast que revela las fascinantes historias detrás de los objetos cotidianos...</p>
-        <p data-lang="en" style="display:none;">Objects with History is a podcast that reveals the fascinating stories behind everyday objects...</p>
-        <h3 data-lang="es">Episodios</h3>
-        <h3 data-lang="en" style="display:none;">Episodes</h3>
+        <h2>Objetos con Historia – El Podcast que Revela los Secretos de los Objetos Cotidianos</h2>
+        <p>Bienvenido a Objetos con Historia, el podcast donde exploramos el origen, evolución e impacto de los objetos que usamos a diario. Desde el humilde tenedor hasta la revolucionaria bombilla eléctrica, cada episodio está lleno de curiosidades, anécdotas sorprendentes y datos históricos que te harán ver el mundo con otros ojos.</p>
+        <p>En este viaje sonoro descubrirás cómo herramientas, utensilios y artefactos han moldeado la vida moderna, transformando nuestra manera de vivir, trabajar y comunicarnos. Si te apasiona la historia, la tecnología y la cultura, este es el lugar perfecto para ti.</p>
+        <p>🎧 Escucha nuestros episodios y descubre la historia oculta detrás de los objetos más cotidianos.</p>
+        <p>📢 Síguenos y comparte para que más personas descubran la magia de los objetos con historia.</p>
+        <h3>Episodios</h3>
         <ul class="episode-list">
-            <li class="episode-item">
-                <div class="episode-video">
-                    <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="episode-text">
-                    <p data-lang="es">Descubre la sorprendente historia del tenedor...</p>
-                    <p data-lang="en" style="display:none;">Discover the surprising history of the fork...</p>
-                </div>
+            <li>
+                <h4>Episodio 10: La Historia de la Cafetera - Parte 3</h4>
+                <iframe src="https://www.youtube.com/embed/NFwk4O2_AmY" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 9: La Historia de la Cafetera - Parte 2</h4>
+                <iframe src="https://www.youtube.com/embed/NgJMC9fqbus" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 8: La Cafetera I</h4>
+                <iframe src="https://www.youtube.com/embed/CVF8_GmUJGM" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 7: La Licuadora</h4>
+                <iframe src="https://www.youtube.com/embed/zbW7zIpSzzc" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 6: El Refrigerador</h4>
+                <iframe src="https://www.youtube.com/embed/FTmmlhrxToQ" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 5: La Olla de Presión</h4>
+                <iframe src="https://www.youtube.com/embed/oXTBy7oX0ZY" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 4: El Plato</h4>
+                <iframe src="https://www.youtube.com/embed/mR6yhGr6nwM" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 3: El Cuchillo</h4>
+                <iframe src="https://www.youtube.com/embed/zO6trVSgNGo" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 2: La Cuchara</h4>
+                <iframe src="https://www.youtube.com/embed/97z9OqDEeOc" allowfullscreen></iframe>
+            </li>
+            <li>
+                <h4>Episodio 1: El Tenedor</h4>
+                <iframe src="https://www.youtube.com/embed/-UTfirxjdEI" allowfullscreen></iframe>
             </li>
         </ul>
     </div>
     <footer>
-        &copy; 2025 Objetos con Historia
+        &copy; 2025 Objetos con Historia | Síguenos en redes sociales
     </footer>
 </body>
 </html>
+
